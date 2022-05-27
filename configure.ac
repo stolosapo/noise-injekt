@@ -26,7 +26,6 @@ AC_CHECK_HEADERS([limits])
 AC_CHECK_HEADERS([cstring fstream sstream])
 AC_CHECK_HEADERS([signal.h])
 AC_CHECK_HEADERS([sys/time.h time.h])
-AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([pthread.h required])])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STDBOOL
