@@ -1,6 +1,11 @@
 Prerequisites
 -------------
 
+No prerequisites needed. The only prerequisite that needed is in the case
+of running the tests of /tests folder, then it needs the libnoisetest,
+you can download and install the latest version here 
+(https://github.com/stolosapo/noise-test/releases).
+
 Building
 --------
 

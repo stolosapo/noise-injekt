@@ -1,2 +1,6 @@
-<autotools-cpp-lib-template>
---------------------------
+noiseinjekt
+-----------
+
+A simple C++ library that implements dependecy injection. 
+
+See in folder /examples for usage example, and in folder /tests as well.

@@ -1,17 +1,9 @@
-# <autotools-cpp-lib-template>
-A Template Repository for C++ Libraries using Autotools
+# noiseinjekt
+A simple C++ library that implements dependecy injection.
 
-### TODO: Replace this across the project..
-```
-<repo-owner>                 = the GitHub owner
-<owner-email>                = the owner contact email
-<autotools-cpp-lib-template> = the current repository name
-<autotoolscpplibtemplate>    = the library name, to be installed
-```
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/stolosapo/noise-injekt)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/<repo-owner>/<autotools-cpp-lib-template>)
-
-![Build](https://github.com/<repo-owner>/<autotools-cpp-lib-template>/actions/workflows/makefile.yml/badge.svg) 
+![Build](https://github.com/stolosapo/noise-injekt/actions/workflows/makefile.yml/badge.svg) 
 
 ### Prepare compilation
 ```bash
@@ -33,7 +25,7 @@ sudo make uninstall
 
 ### Run
 ```bash
-<autotoolscpplibtemplate>
+noiseinjekt
 ```
 
 ## Clean all untracked files
@@ -42,5 +34,5 @@ git clean -xdf
 ```
 
 ### Use Library
-If everything installed fine then pass `-l<autotoolscpplibtemplate>` parameter in linker, when build your application.
+If everything installed fine then pass `-lnoiseinjekt` parameter in linker, when build your application.
 Then use it in your app like in `example/`.

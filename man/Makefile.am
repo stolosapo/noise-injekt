@@ -1,2 +1,2 @@
-EXTRA_DIST = <autotoolscpplibtemplate>.1
-man_MANS = <autotoolscpplibtemplate>.1
+EXTRA_DIST = noiseinjekt.1
+man_MANS = noiseinjekt.1
