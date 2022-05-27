@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([<autotoolscpplibtemplate>], [1.0.0], [<owner-email>])
+AC_INIT([noiseinjekt], [1.0.0], [aldrigmej@gmail.com])
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([config.h])
@@ -26,7 +26,6 @@ AC_CHECK_HEADERS([limits])
 AC_CHECK_HEADERS([cstring fstream sstream])
 AC_CHECK_HEADERS([signal.h])
 AC_CHECK_HEADERS([sys/time.h time.h])
-AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([pthread.h required])])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STDBOOL
