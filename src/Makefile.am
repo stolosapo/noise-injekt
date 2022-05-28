@@ -6,7 +6,8 @@ bin_PROGRAMS = noiseinjekt
 mainincludedir = $(includedir)/noiseinjekt
 maininclude_HEADERS = \
     Service.h \
-    AppContext.h
+    AppContext.h \
+    GlobalAppContext.h
 
 common_sources = \
     Service.cpp \
