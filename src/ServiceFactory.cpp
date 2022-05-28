@@ -1,4 +1,6 @@
-#include "ServiceFactory.h"
+#include "Service.h"
+
+using namespace NoiseInjekt;
 
 ServiceFactory::ServiceFactory()
 {
@@ -12,5 +14,5 @@ ServiceFactory::ServiceFactory(string implementationSelection)
 
 ServiceFactory::~ServiceFactory()
 {
-    
+
 }
