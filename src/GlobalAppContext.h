@@ -17,8 +17,8 @@ extern AppContext appContext;
 namespace NoiseInjekt
 {
     /* Context initialization */
-    void initializeAppContext(int argc, char* argv[]);
-    void deleteAppContext();
+    void initializeAppContext(RegisterServiceDelegate registerServiceDelegate, int argc, char* argv[]);
+    void deleteAppContext(FinilizeServiceDelegate finilizeServiceDelegate);
 
 
     /* Context methods */

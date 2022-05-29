@@ -6,7 +6,7 @@ using namespace NoiseInjekt;
 
 AppContext appContext;
 
-void initializeAppContext(RegisterServiceDelegate registerServiceDelegate, int argc, char* argv[])
+void NoiseInjekt::initializeAppContext(RegisterServiceDelegate registerServiceDelegate, int argc, char* argv[])
 {
     /* Created context */
     cout << "* Created appContext: " << &appContext << endl;
@@ -20,7 +20,7 @@ void initializeAppContext(RegisterServiceDelegate registerServiceDelegate, int a
     loadStartupServices();
 }
 
-void deleteAppContext(FinilizeServiceDelegate finilizeServiceDelegate)
+void NoiseInjekt::deleteAppContext(FinilizeServiceDelegate finilizeServiceDelegate)
 {
     finilizeServiceDelegate();
 }
