@@ -10,18 +10,35 @@ void mainFinilizeServiceDelegate();
 class TestService: public Service
 {
 public:
-    TestService(): Service() { }
-    virtual ~TestService() { }
+    TestService(): Service()
+    {
+        cout << "TestService :: Initialized" << endl;
+    }
+
+    virtual ~TestService()
+    {
+        cout << "TestService :: Finalized" << endl;
+    }
+
     void test()
     {
         cout << "This is a Service Test" << endl;
-    } 
+    }
 };
 
 class TestServiceFactory: public ServiceFactory
 {
 public:
-	TestServiceFactory(): ServiceFactory() { }
+	TestServiceFactory(): ServiceFactory()
+    {
+        cout << "TestServiceFactory :: Initialized" << endl;
+    }
+
+    virtual ~TestServiceFactory()
+    {
+        cout << "TestServiceFactory :: Finalized" << endl;
+    }
+
 	Service *create()
     {
         return (Service*) new TestService;
@@ -37,6 +54,14 @@ int main(int argc, char* argv[])
     TestService* srv = inject<TestService>("TestService");
     srv->test();
 
+    TestService* srv2 = inject<TestService>("TestService");
+    srv2->test();
+
+    cout << "Those 2 services are actual the same instance..? "
+        << (srv == srv2)
+        << " since that the service have registared as SINGLETON."
+        << endl;
+
     deleteAppContext(&mainFinilizeServiceDelegate);
 
     cout << "Bye Bye.." << endl;
@@ -44,12 +69,12 @@ int main(int argc, char* argv[])
 
 void mainRegisterServiceDelegate(int argc, char* argv[])
 {
-    registerGlobalService<TestServiceFactory>(SINGLETON, "TestService", new TestServiceFactory);
+    cout << " | GlobalAppContext Services Registration .." << endl;
 
-    cout << "Initialized" << endl;
+    registerGlobalService<TestServiceFactory>(SINGLETON, "TestService", new TestServiceFactory);
 }
 
 void mainFinilizeServiceDelegate()
 {
-    cout << "Finalized" << endl;
+    cout << " | GlobalAppContext Fililiazation .." << endl;
 }

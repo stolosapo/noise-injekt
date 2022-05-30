@@ -5,12 +5,12 @@ using namespace std;
 
 TestService::TestService(): Service()
 {
-
+    cout << "TestService :: Initialized" << endl;
 }
 
 TestService::~TestService()
 {
-
+    cout << "TestService :: Finalized" << endl;
 }
 
 void TestService::test()
