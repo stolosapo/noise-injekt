@@ -1,9 +1,8 @@
 # noiseinjekt
 A simple C++ library that implements dependecy injection.
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/stolosapo/noise-injekt)
-
 ![Build](https://github.com/stolosapo/noise-injekt/actions/workflows/makefile.yml/badge.svg) 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/stolosapo/noise-injekt)
 
 ### Prepare compilation
 ```bash
