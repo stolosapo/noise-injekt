@@ -6,11 +6,14 @@ bin_PROGRAMS = noiseinjekt
 mainincludedir = $(includedir)/noiseinjekt
 maininclude_HEADERS = \
     Service.h \
-    ServiceFactory.h 
+    AppContext.h \
+    GlobalAppContext.h
 
 common_sources = \
     Service.cpp \
-    ServiceFactory.cpp 
+    ServiceFactory.cpp \
+    AppContext.cpp \
+    GlobalAppContext.cpp
 
 noiseinjekt_SOURCES = main.cpp $(common_sources)
 noiseinjekt_LDADD = libnoiseinjekt.la
